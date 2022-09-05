@@ -13,12 +13,14 @@ _$_Pokemon _$$_PokemonFromJson(Map json) => $checkedCreate(
       json,
       ($checkedConvert) {
         final val = _$_Pokemon(
-          id: $checkedConvert('id', (v) => v as String? ?? ''),
+          id: $checkedConvert('id', (v) => v as int? ?? 0),
           imageUrl: $checkedConvert('imageUrl', (v) => v as String? ?? ''),
           name: $checkedConvert('name', (v) => v as String? ?? ''),
           genus: $checkedConvert('genus', (v) => v as String? ?? ''),
-          height: $checkedConvert('height', (v) => v as String? ?? ''),
-          wight: $checkedConvert('wight', (v) => v as String? ?? ''),
+          height:
+              $checkedConvert('height', (v) => (v as num?)?.toDouble() ?? 0),
+          weight:
+              $checkedConvert('weight', (v) => (v as num?)?.toDouble() ?? 0),
           commentary: $checkedConvert('commentary', (v) => v as String? ?? ''),
         );
         return val;
@@ -32,6 +34,6 @@ Map<String, dynamic> _$$_PokemonToJson(_$_Pokemon instance) =>
       'name': instance.name,
       'genus': instance.genus,
       'height': instance.height,
-      'wight': instance.wight,
+      'weight': instance.weight,
       'commentary': instance.commentary,
     };

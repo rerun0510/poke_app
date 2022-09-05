@@ -6,12 +6,12 @@ part 'pokemon.g.dart';
 @freezed
 class Pokemon with _$Pokemon {
   const factory Pokemon({
-    @Default('') String id,
+    @Default(0) int id,
     @Default('') String imageUrl,
     @Default('') String name,
     @Default('') String genus,
-    @Default('') String height,
-    @Default('') String wight,
+    @Default(0) double height,
+    @Default(0) double weight,
     @Default('') String commentary,
   }) = _Pokemon;
 

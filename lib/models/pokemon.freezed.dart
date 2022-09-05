@@ -20,12 +20,12 @@ Pokemon _$PokemonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Pokemon {
-  String get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get genus => throw _privateConstructorUsedError;
-  String get height => throw _privateConstructorUsedError;
-  String get wight => throw _privateConstructorUsedError;
+  double get height => throw _privateConstructorUsedError;
+  double get weight => throw _privateConstructorUsedError;
   String get commentary => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,12 +38,12 @@ abstract class $PokemonCopyWith<$Res> {
   factory $PokemonCopyWith(Pokemon value, $Res Function(Pokemon) then) =
       _$PokemonCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {int id,
       String imageUrl,
       String name,
       String genus,
-      String height,
-      String wight,
+      double height,
+      double weight,
       String commentary});
 }
 
@@ -62,14 +62,14 @@ class _$PokemonCopyWithImpl<$Res> implements $PokemonCopyWith<$Res> {
     Object? name = freezed,
     Object? genus = freezed,
     Object? height = freezed,
-    Object? wight = freezed,
+    Object? weight = freezed,
     Object? commentary = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -85,11 +85,11 @@ class _$PokemonCopyWithImpl<$Res> implements $PokemonCopyWith<$Res> {
       height: height == freezed
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as String,
-      wight: wight == freezed
-          ? _value.wight
-          : wight // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as double,
       commentary: commentary == freezed
           ? _value.commentary
           : commentary // ignore: cast_nullable_to_non_nullable
@@ -105,12 +105,12 @@ abstract class _$$_PokemonCopyWith<$Res> implements $PokemonCopyWith<$Res> {
       __$$_PokemonCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {int id,
       String imageUrl,
       String name,
       String genus,
-      String height,
-      String wight,
+      double height,
+      double weight,
       String commentary});
 }
 
@@ -130,14 +130,14 @@ class __$$_PokemonCopyWithImpl<$Res> extends _$PokemonCopyWithImpl<$Res>
     Object? name = freezed,
     Object? genus = freezed,
     Object? height = freezed,
-    Object? wight = freezed,
+    Object? weight = freezed,
     Object? commentary = freezed,
   }) {
     return _then(_$_Pokemon(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -153,11 +153,11 @@ class __$$_PokemonCopyWithImpl<$Res> extends _$PokemonCopyWithImpl<$Res>
       height: height == freezed
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as String,
-      wight: wight == freezed
-          ? _value.wight
-          : wight // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as double,
       commentary: commentary == freezed
           ? _value.commentary
           : commentary // ignore: cast_nullable_to_non_nullable
@@ -170,12 +170,12 @@ class __$$_PokemonCopyWithImpl<$Res> extends _$PokemonCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Pokemon implements _Pokemon {
   const _$_Pokemon(
-      {this.id = '',
+      {this.id = 0,
       this.imageUrl = '',
       this.name = '',
       this.genus = '',
-      this.height = '',
-      this.wight = '',
+      this.height = 0,
+      this.weight = 0,
       this.commentary = ''});
 
   factory _$_Pokemon.fromJson(Map<String, dynamic> json) =>
@@ -183,7 +183,7 @@ class _$_Pokemon implements _Pokemon {
 
   @override
   @JsonKey()
-  final String id;
+  final int id;
   @override
   @JsonKey()
   final String imageUrl;
@@ -195,17 +195,17 @@ class _$_Pokemon implements _Pokemon {
   final String genus;
   @override
   @JsonKey()
-  final String height;
+  final double height;
   @override
   @JsonKey()
-  final String wight;
+  final double weight;
   @override
   @JsonKey()
   final String commentary;
 
   @override
   String toString() {
-    return 'Pokemon(id: $id, imageUrl: $imageUrl, name: $name, genus: $genus, height: $height, wight: $wight, commentary: $commentary)';
+    return 'Pokemon(id: $id, imageUrl: $imageUrl, name: $name, genus: $genus, height: $height, weight: $weight, commentary: $commentary)';
   }
 
   @override
@@ -218,7 +218,7 @@ class _$_Pokemon implements _Pokemon {
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.genus, genus) &&
             const DeepCollectionEquality().equals(other.height, height) &&
-            const DeepCollectionEquality().equals(other.wight, wight) &&
+            const DeepCollectionEquality().equals(other.weight, weight) &&
             const DeepCollectionEquality()
                 .equals(other.commentary, commentary));
   }
@@ -232,7 +232,7 @@ class _$_Pokemon implements _Pokemon {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(genus),
       const DeepCollectionEquality().hash(height),
-      const DeepCollectionEquality().hash(wight),
+      const DeepCollectionEquality().hash(weight),
       const DeepCollectionEquality().hash(commentary));
 
   @JsonKey(ignore: true)
@@ -250,18 +250,18 @@ class _$_Pokemon implements _Pokemon {
 
 abstract class _Pokemon implements Pokemon {
   const factory _Pokemon(
-      {final String id,
+      {final int id,
       final String imageUrl,
       final String name,
       final String genus,
-      final String height,
-      final String wight,
+      final double height,
+      final double weight,
       final String commentary}) = _$_Pokemon;
 
   factory _Pokemon.fromJson(Map<String, dynamic> json) = _$_Pokemon.fromJson;
 
   @override
-  String get id;
+  int get id;
   @override
   String get imageUrl;
   @override
@@ -269,9 +269,9 @@ abstract class _Pokemon implements Pokemon {
   @override
   String get genus;
   @override
-  String get height;
+  double get height;
   @override
-  String get wight;
+  double get weight;
   @override
   String get commentary;
   @override
